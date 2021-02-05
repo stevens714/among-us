@@ -31,7 +31,7 @@ Character Table:  has the following rows:
 - Image - string
 
 
-Attributes Table:  has the following rows:
+Skills Table:  has the following rows:
 
 - Tenacity - integer
 - Intelligence - integer
