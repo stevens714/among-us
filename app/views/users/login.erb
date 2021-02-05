@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("https://thumbs.gfycat.com/BasicWeightyFeline-small.gif");
+}
+</style>
+
+<center><p style="color:skyblue;"><%= @error %></p></center>
+<br><br>
+
+<center><p style="color:white;">Login To Your Account!</p>
+
+<form action="/login" method="post">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Login">
+</form>
+

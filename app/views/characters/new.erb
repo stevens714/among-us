@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("https://thumbs.gfycat.com/BasicWeightyFeline-small.gif");
+}
+</style>
+<header><center><img src="https://staticg.sportskeeda.com/editor/2020/11/c590d-16043950879768-800.jpg" width="500" height="200" alt="character photo"></center></header>
+<style>
+h1 {text-align: center;}
+div {
+    text-align: left;
+}
+
+</style>
+
+<body>
+<h1 style="color:white;"> CREATE A CHARACTER </h1>
+<p style="color:white;"><%= @error %> </p>
+<div>
+<br><br>
+<form action="/characters" method="post">
+    <label style="color:white;"><i><b>Name</label>
+    <input type="text" name="name">
+
+    <br>
+    <br>
+
+    <label style="color:white;">Color</label>
+    <input type="text" name="color">
+
+    <br>
+    <br>
+
+    <label style="color:white;">Age</label>
+    <input type="number" name="age">
+
+    <br>
+    <br>
+
+    <label style="color:white;">Accessory</label>
+    <input type="text" name="accessory">
+
+    <br>
+    <br>
+
+    <label style="color:white;">Special Ability</label>
+    <input type="text" name="special_ability">
+
+    <br>
+    <br>
+
+    <label style="color:white;">Backstory</label>
+    <textarea name="backstory"></textarea>
+
+    <br>
+    <br>
+
+    <label style="color:white;">Image URL</label>
+    <input type="text" name="image">
+
+    <br>
+    <br>
+
+    <button type="submit">Add Your Character!</button>
+
+
+</div>
+</form>
+</body>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("https://thumbs.gfycat.com/BasicWeightyFeline-small.gif");
+}
+
+
+.center {
+  text-align: center; 
+}
+h1 {
+  animation: color-change 1s infinite;
+}
+
+@keyframes color-change {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: red; }
+}
+
+
+</style>
+</head>
+<body>
+<center><h1>Current Characters</h1></center>
+<br> <br> 
+<center><header><img src="https://localist-images.azureedge.net/photos/34751159614390/big_square/287ee16fc874a09531d4172710193b44b1e2d7a4.jpg" alt="character photo"></header></center>
+
+<center><h3><a href="/characters/new">Create Your Character</a></h3></center>
+
+
+<% @characters.each do |character| %>
+   <br><br> <br><br>
+   
+   <h2 style="color:white;"><a href="/characters/<%= character.id %>"><%= character.name %></a></h2>
+   <p style="color:white;">Color:  <%= character.color %></p>
+   <p style="color:white;">Age:  <%= character.age %></p>
+   <p style="color:white;">Accessory:  <%= character.accessory %></p>
+   <p style="color:white;">Special Ability:  <%= character.special_ability %></p>
+   <p style="color:white;">Backstory:  <%= character.backstory %></p>
+   <img src="<%= character.image %>" width="100" height="160">
+   <br></p>
+   <% if character.user && current_user == character.user %>
+      <a href="/characters/<%= character.id %>/edit">Edit</a>
+   <% end %>
+<% end %>
+
+
+</html>
