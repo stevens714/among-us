@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210205162639) do
+ActiveRecord::Schema.define(version: 20210205004229) do
 
   create_table "characters", force: :cascade do |t|
     t.string  "name"
@@ -30,8 +30,11 @@ ActiveRecord::Schema.define(version: 20210205162639) do
   end
 
   create_table "skills", force: :cascade do |t|
-    t.string  "name"
-    t.integer "value"
+    t.integer "charm"
+    t.integer "strength"
+    t.integer "speed"
+    t.integer "intelligence"
+    t.integer "tenacity"
   end
 
   create_table "users", force: :cascade do |t|

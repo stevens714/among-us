@@ -1,51 +1,44 @@
-# To Do
+# Custom Among Us
 
-# create migrations
-# create models with relationships
-# plan out routes for controller following restful conventions and map to CRUD actions
-# build controller actions passing appropriate date to views
-# build views {forms}
-# build navigation
+A platform for the creation of custom Among Us characters including the following attributes:
 
-# validations
+- Name
+- Color
+- Age
+- Accessory
+- Special Ability
+- Backstory
 
+### Installing
 
+A step by step series of examples that tell you how to get a development env running
 
-# Outline for project
+1. Fork and clone the repository.
 
-User Table:  has the following rows:
+2. Load the repository in your favorite development software.
 
-- Username - string
-- Password - string
+3. Run 'bundle install' in your terminal to install any uninstalled dependencies.
 
-
-Character Table:  has the following rows:
-
-- ID - Primary Integer Key
-- Name - string
-- Color - string
-- Age - integer
-- Accessory - string
-- Special Ability - string
-- Backstory - textarea
-- Image - string
+4. Run 'shotgun' in your terminal to create a local environment to run and play with the app.  
 
 
-Skills Table:  has the following rows:
+## Built With
 
-- Tenacity - integer
-- Intelligence - integer
-- Speed - integer
-- Strength - integer
-- Charm - integer
-- Image - string
-
-Users can have many characters
-Character will belong to user and has many attributes
-Attributes have many characters THROUGH JOIN TABLE
+* [Sinatra](https://rubygems.org/gems/sinatra) - Framework
+* [ActiveRecord](https://rubygems.org/gems/activerecord) - Database management
+* [sqlite3](https://rubygems.org/gems/sqlite3) - Database engine
+* [bcrypt](https://rubygems.org/gems/bcrypt) - Password hasher
 
 
-characters_attributes Table:  has the following rows:
+## Contributing
 
-- character_id
-- attribute_id
+Bug reports and pull requests are welcome on GitHub at https://github.com/reneenordholm/avidcraft. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+
+## Authors
+
+* [Steven Stieglitz](https://github.com/stevens714) - *App Creator*
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+

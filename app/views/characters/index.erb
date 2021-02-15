@@ -25,10 +25,12 @@ h1 {
 </head>
 <body>
 <center><h1>Current Characters</h1></center>
+<br><br>
+<center><h2 style="color:white;">Click the name of a character to see their backstory!</h2></center>
 <br> <br> 
 <center><header><img src="https://localist-images.azureedge.net/photos/34751159614390/big_square/287ee16fc874a09531d4172710193b44b1e2d7a4.jpg" alt="character photo"></header></center>
 
-<center><h3><a href="/characters/new">Create Your Character</a></h3></center>
+<center><h3><a href="/characters/new">Create Your Own Character!</a></h3></center>
 
 
 <% @characters.each do |character| %>
@@ -39,7 +41,6 @@ h1 {
    <p style="color:white;">Age:  <%= character.age %></p>
    <p style="color:white;">Accessory:  <%= character.accessory %></p>
    <p style="color:white;">Special Ability:  <%= character.special_ability %></p>
-   <p style="color:white;">Backstory:  <%= character.backstory %></p>
    <img src="<%= character.image %>" width="100" height="160">
    <br></p>
    <% if character.user && current_user == character.user %>
