@@ -49,7 +49,8 @@ class CharactersController < ApplicationController
                 else
                     redirect '/characters'
                 end
-            end
+            
+        end
             
 
     # UPDATE 
@@ -58,8 +59,13 @@ class CharactersController < ApplicationController
         # make a get request to '/characters/:id/edit'
         get '/characters/:id/edit' do
             require_login
-            @character = Character.find(params[:id])
-            erb :'/characters/edit'
+            @character = Character.find_by(id: params[:id])
+                if @character
+                    redirect '/characters' if @character.user_id != current_user.id
+                    erb :'/characters/edit'
+                else
+                    redirect '/characters'
+                end
         end
 
         # Update
@@ -68,6 +74,7 @@ class CharactersController < ApplicationController
         patch '/characters/:id' do
             require_login
             @character = Character.find(params[:id])
+            redirect '/characters' if @character.user_id != current_user.id
             if !params["character"]["name"].empty? && !params["character"]["color"].empty?
                 @character.update(params["character"])
                 redirect "/characters/#{params[:id]}"
@@ -98,6 +105,7 @@ class CharactersController < ApplicationController
         delete '/characters/:id' do
             require_login
             character = Character.find(params[:id])
+            redirect '/characters' if character.user_id != current_user.id
             character.destroy
             redirect '/characters'
         end

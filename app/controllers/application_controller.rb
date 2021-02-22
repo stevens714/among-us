@@ -28,5 +28,8 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-
+  # def authorize
+  #   redirect '/characters' if @character.user_id != current_user.id
+  # end
+ 
 end
